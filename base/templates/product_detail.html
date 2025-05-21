@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Product Details</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>{{ product.name }}</h2>
+                <p><strong>Price:</strong> ${{ product.price }}</p>
+                <p><strong>Description:</strong></p>
+                <p>{{ product.description }}</p>
+    
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>
+<style>
+  /* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117;
+    margin: 0;
+    padding: 0;
+    color: #c9d1d9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #161b22;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #58a6ff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #58a6ff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Image du produit */
+img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #58a6ff;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Section des détails du produit */
+.col-md-6 {
+    padding: 20px;
+}
+
+h2 {
+    color: #58a6ff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #8b949e;
+    line-height: 1.5;
+}
+
+strong {
+    color: #c9d1d9;
+    font-size: 1.3rem;
+}
+
+/* Prix et bouton futuriste */
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff7b72;
+    background: rgba(255, 123, 114, 0.2);
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.btn-buy {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff7b72, #d63384);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 123, 114, 0.4);
+}
+
+.btn-buy:hover {
+    background: linear-gradient(45deg, #d63384, #ff7b72);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+</style>
